@@ -20,11 +20,13 @@ a {
 
 #navBar{
     display: grid;
-    background-color: rgb(255, 253, 238);
+    background-color: #ffeeb3;
     grid-template-columns: 1fr 1fr;
     height: 7vh;
     align-items: center;
     border-bottom: 1px solid gray;
+    padding-right: 14vw;
+    padding-left: 14vw;
 }
 
 .navTitleContainer{
@@ -38,9 +40,9 @@ a {
     display: grid;
     grid-template-columns: 1fr 1.2fr 1fr 0.8fr 1fr;
     list-style-type: none;
-    justify-content: center;
     align-items: center;
     gap: 1.4rem;
+    place-items: center;
 }
 
 .navLink{
@@ -49,6 +51,7 @@ a {
     padding-top: 3px;
     padding-bottom: 3px;
     color: var(--primary-font-color);
+
 }
 .navLink:hover{
     color: var(--secondary-font-color);
@@ -77,4 +80,55 @@ a {
     .navLinkList{
         gap: 2rem;
     }
+}
+
+@media (max-width: 1100px) {
+    #navBar{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* Dashboard */
+
+.dashboard{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr;
+    height: 93vh;
+    background-color: rgb(255, 253, 238);
+    justify-items: center;
+    padding-top: 3.5rem;
+}
+
+.dashboardPageTitle{
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+    color: var(--primary-font-color);
+}
+
+.profileCard{
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    align-items: center;
+    height: 8.5rem;
+    width: 46rem;
+    background-color: #ffeeb3;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+#profileCardPicture{
+    height: 4rem;
+    border-radius: 10rem;
+}
+
+.profileCardName{
+    font-size: 1.5rem;
+}
+
+.profileCardDesc{
+    font-size: 1rem;
 }
